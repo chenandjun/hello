@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanzan.dao.UserMapper">
+    <!-- 用户登陆 -->
+    <select id="getUser" parameterType="com.lanzan.entity.U_User" resultType="com.lanzan.entity.U_User">
+        SELECT user_id,user_name,user_pwd FROM u_user WHERE user_name=#{user_name} AND user_pwd=#{user_pwd}
+    </select>
+    <!-- 用户注册 -->
+    <insert id="addU_User" parameterType="com.lanzan.entity.U_User">
+        INSERT INTO u_user(user_name,user_pwd)
+        	VALUES(#{user_name},#{user_pwd})
+    </insert>
+</mapper>
