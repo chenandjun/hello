@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -16,9 +17,8 @@ public class UserController {
     public  Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @RequestMapping(value = "login")
-    public String login(){
-        U_User u_user=userMapper.getUser(new U_User("admin","admin"));
-        logger.error("登陆异常");
+    public String login(String user_name,String user_pwd){
+        U_User u_user=userMapper.getUser(new U_User(user_name,user_pwd));
         System.out.println(u_user.getUser_id());
         return "index";
     }
