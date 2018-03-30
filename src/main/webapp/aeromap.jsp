@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <div id="map"></div>
+    <div id="map" ></div>
     <script type="text/javascript" src="static/feaflet/js/ditu.js"></script>
 </body>
 </html>

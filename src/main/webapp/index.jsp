@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>主页</title>
@@ -118,7 +119,7 @@
         </div>
         <!-- 底部 -->
         <div class="layui-footer footer">
-            <p><span>copyright @2018 驊驊龔頾</span>　　<a onclick="donation()" class="layui-btn layui-btn-danger layui-btn-sm">捐赠作者</a></p>
+            <p><span></span>　　<%--<a onclick="donation()" class="layui-btn layui-btn-danger layui-btn-sm">捐赠作者</a>--%></p>
         </div>
     </div>
 

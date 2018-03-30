@@ -66,7 +66,7 @@
     {
       "title": "直播服务",
       "icon": "&#xe634;",
-      "href": "page/img/images.html",
+      "href": "live.jsp",
       "spread": false
     },
     {
