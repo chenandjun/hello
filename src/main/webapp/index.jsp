@@ -8,8 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <head>
     <title>主页</title>
+    <script type="text/javascript" src="static/jquery/jquery.min.js"></script>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="static/layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="static/mycss/index.css" media="all" />
@@ -49,7 +51,7 @@
                     </li>
                 </ul>--%>
                 <!-- 顶部右侧菜单 -->
-                <ul class="layui-nav top_menu">j
+                <ul class="layui-nav top_menu">
                    <%-- <li class="layui-nav-item" pc>
                         <a href="javascript:;" class="clearCache"><i class="layui-icon" data-icon="&#xe640;">&#xe640;</i><cite>清除缓存</cite><span class="layui-badge-dot"></span></a>
                     </li>
@@ -75,7 +77,7 @@
         <div class="layui-side layui-bg-black">
             <div class="user-photo">
                 <a class="img" title="我的头像" ><img src="static/image/face.jpg" class="userAvatar"></a>
-                <p>你好！<span class="userName">驊驊龔頾</span>, 欢迎登录</p>
+                <p><span class="userName">优澈</span></p>
             </div>
             <!-- 搜索 -->
            <%-- <div class="layui-form component">
@@ -112,7 +114,7 @@
                 </ul>
                 <div class="layui-tab-content clildFrame">
                     <div class="layui-tab-item layui-show">
-                        <iframe src="aeromap.jsp"></iframe>
+                        <iframe src="live.jsp" allowtransparency="true" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no" frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0"></iframe>
                     </div>
                 </div>
             </div>
@@ -130,5 +132,16 @@
     <script type="text/javascript" src="static/layui/layui.js"></script>
     <script type="text/javascript" src="static/myjs/index/index.js"></script>
     <script type="text/javascript" src="static/myjs/index/cache.js"></script>
+
 </body>
+<script>
+    returnValue=parent.layer.open({
+        type: 2,
+        title: title,
+        maxmin: false,
+        area : [w,h],
+        content: url
+    });
+    parent.layer.full(returnValue);
+</script>
 </html>

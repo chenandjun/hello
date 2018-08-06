@@ -1,51 +1,46 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 15201
-  Date: 2018/3/29
-  Time: 14:50
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+﻿<!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <head>
     <title>直播</title>
+    <link href="static/video/css/video-js.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="static/mycss/liveht.css" media="all" />
     <link rel="stylesheet" href="static/layui/css/layui.css" media="all" />
-    <link href="static/video/css/video-js.css" rel="stylesheet">
     <style>
-        html,
-        body,
-        .layui-fluid{
-            height: 100%;
-        }
-        .layui-fluid div{
-            height: 100%;
+        .wrapper {
+            width: 680px;
+            margin:0 auto;
         }
         #myvideo{
-            width: 100%;
+            width: 680px;
+            height: 320px;
+        }
+        .wrapperone{
+            width: 840px;
+            margin:0 auto;
         }
         .video_list li{
+            float: left;
+            text-align:center;
             list-style: none;
-            width: 98%;
-            height: 15%;
-            border:solid 1px;
-            margin-left: 2px;
-            margin-bottom: 2px;
+            margin-right: 10px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="layui-fluid">
-        <div class="layui-col-md2">
 
-        </div>
-        <div class="layui-col-md8">
-            <video id="myvideo" class="video-js vjs-default-skin" controls preload="auto" poster="static/image/login_bg.jpg" >
-                <source src="rtmp://pili-live-rtmp.www.ican-smart.com/chen01/test001" type="rtmp/flv">
+        <div class="wrapper">
+            <button class="layui-btn" style="width: 100px;">开启对讲</button>
+            <video id="myvideo" class="video-js" controls preload="auto" data-setup="{}">
+                <source src="rtmp://pili-live-rtmp.www.ican-smart.com/chen01/test001uu" type="rtmp/flv">
             </video>
             <script src="static/video/js/video.min.js"></script>
             <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
             <script src="http://vjs.zencdn.net/5.19/lang/zh-CN.js"></script>
-            <script src="http://vjs.zencdn.net/5.5.3/video.js"></script> <script>
+            <script src="http://vjs.zencdn.net/5.5.3/video.js"></script>
+            <script>
                 videojs.options.flash.swf = "static/video/js/video-js.swf";
             </script>
             <script>
@@ -53,31 +48,64 @@
                 player.play();
             </script>
         </div>
-        <div class="layui-col-md2" style="overflow:auto">
-                <ul class="video_list" style="">
-                    <li>
-                        <video style="width: 100%;height: 100%;" poster="static/image/login_bg.jpg">
-                            <source src="rtmp://live.hkstv.hk.lxdns.com/live/hks" type="rtmp/flv">
-                        </video>
-                    </li>
-                    <li>
-                        <video style="width: 100%;height: 100%;" poster="static/image/login_bg.jpg">
-                            <source src="rtmp://live.hkstv.hk.lxdns.com/live/hks" type="rtmp/flv">
-                        </video>
-                    </li>
-                    <li>
-                        <video style="width: 100%;height: 100%;" poster="static/image/login_bg.jpg">
-                            <source src="rtmp://live.hkstv.hk.lxdns.com/live/hks" type="rtmp/flv">
-                        </video>
-                    </li>
-                    <li>
-                        <video style="width: 100%;height: 100%;" poster="static/image/login_bg.jpg">
-                            <source src="rtmp://live.hkstv.hk.lxdns.com/live/hks" type="rtmp/flv">
-                        </video>
-                    </li>
-                </ul>
+        <div class="wrapperone">
+            <ul class="video_list">
+                <li>
+                    <div class="box">
+                        <div class="he_border1">
+                            <img class="he_border1_img" src="static/image/drone_001.jpg" alt="Image 01">
+                            <div class="he_border1_caption">
+                                <h3 class="he_border1_caption_h">Helloweba</h3>
+                                <img class="he_border1_caption_p" src="static/image/bofang.png">
+                                <a class="he_border1_caption_a" href="#" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="he_border1">
+                            <img class="he_border1_img" src="static/image/drone_002.jpg" alt="Image 01">
+                            <div class="he_border1_caption">
+                                <h3 class="he_border1_caption_h">Helloweba</h3>
+                                <img class="he_border1_caption_p" src="static/image/bofang.png">
+                                <a class="he_border1_caption_a" href="#" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="he_border1">
+                            <img class="he_border1_img" src="static/image/drone_003.jpg" alt="Image 01">
+                            <div class="he_border1_caption">
+                                <h3 class="he_border1_caption_h">Helloweba</h3>
+                                <img class="he_border1_caption_p" src="static/image/bofang.png">
+                                <a class="he_border1_caption_a" href="#" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="he_border1">
+                            <img class="he_border1_img" src="static/image/drone_004.jpg" alt="Image 01">
+                            <div class="he_border1_caption">
+                                <h3 class="he_border1_caption_h">Helloweba</h3>
+                                <img class="he_border1_caption_p" src="static/image/bofang.png">
+                                <a class="he_border1_caption_a" href="#" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </div>
 
 </body>
+<script language="javascript" type="text/javascript">
+    $(function () {
+        var v = document.getElementById("myvideo");
+        document.getElementById("message").innerHTML = "Start: " + v.buffered.start(0) + " End: " + v.buffered.end(0);
+    });
+</script>
 </html>
